@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-grid,
-.project-hero-grid { grid-template-columns: 1.3fr 0.9fr; align-items: center; }
+.project-hero-grid { grid-template-columns: 1.3fr 0.9fr; align-items: start; }
 .card-grid { grid-template-columns: 1.1fr 1fr; }
 .approach-grid,
 .projects-grid,
@@ -136,7 +136,7 @@ h1, h2, h3 {
   letter-spacing: -0.04em;
 }
 
-h1 { font-size: clamp(40px, 7vw, 72px); max-width: 12ch; }
+h1 { font-size: clamp(32px, 4.5vw, 52px); max-width: 20ch; }
 h2 { font-size: clamp(28px, 4vw, 44px); }
 h3 { font-size: 22px; }
 
@@ -154,6 +154,8 @@ h3 { font-size: 22px; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .card,
@@ -190,6 +192,10 @@ h3 { font-size: 22px; }
   color: var(--text-soft);
   font-size: 14px;
 }
+.meta-row { margin-top: 16px; }
+.meta-row + h2,
+.meta-row + h3 { margin-top: 20px; }
+
 .meta-row span {
   padding: 8px 12px;
   background: rgba(255,255,255,0.04);
@@ -243,6 +249,10 @@ h3 { font-size: 22px; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .case-toc a:hover { color: var(--text); }
+.case-toc a.toc-active {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+}
 
 .case-content {
   display: grid;
@@ -294,6 +304,79 @@ h3 { font-size: 22px; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+}
+
+/* Job Stories */
+.job-story-card { position: relative; padding-top: 48px; }
+.job-number {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.25;
+  line-height: 1;
+}
+
+/* Hypothesis grid */
+.hypothesis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.hypothesis-grid .card:last-child:nth-child(4n - 3) {
+  grid-column: span 1;
+}
+.hypothesis-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hypothesis-card p { color: var(--text-soft); margin: 0; font-size: 15px; }
+.hypothesis-num {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+/* Insights — wide cards stacked */
+.insights-stack {
+  display: grid;
+  gap: 24px;
+}
+.insight-card-wide {
+  padding: 36px 40px;
+}
+.insight-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.insight-header h3 { margin: 0; }
+.insight-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+.insight-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.insight-columns p { margin: 0 0 8px; }
+
+@media (max-width: 1024px) {
+  .hypothesis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .insight-columns { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 768px) {
+  .hypothesis-grid { grid-template-columns: 1fr 1fr; }
+  .insight-card-wide { padding: 24px; }
 }
 
 .muted-card { opacity: 0.78; }

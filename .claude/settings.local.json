@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(powershell:*)",
+      "Bash(rm:*)",
+      "Bash(magick identify:*)",
+      "Bash(python:*)",
+      "Bash(where python:*)",
+      "Bash(pip install:*)",
+      "Bash(node:*)",
+      "Bash(where:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(xxd:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(\"D:/github/PolinaDukso/ВЗР/crop_detail.ps1\":*)",
+      "Bash(\"D:/github/PolinaDukso/ВЗР/make_thumb2.ps1\":*)"
+    ]
+  }
+}

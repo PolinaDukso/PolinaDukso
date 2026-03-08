@@ -17,10 +17,10 @@
         <a class="brand" href="index.html">Полина Дуксо</a>
         <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
         <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a class="is-active" href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html">Главная</a>
+          <a class="is-active" href="projects.html">Проекты</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contact.html">Контакты</a>
         </nav>
       </div>
     </header>
@@ -28,16 +28,34 @@
     <main class="section">
       <div class="container">
         <div class="page-head">
-          <p class="eyebrow">Projects</p>
+          <a class="back-link" href="index.html">← На главную</a>
+          <p class="eyebrow">Проекты</p>
           <h1>Кейсы, в которых важны сценарии, системность и реальное влияние на процесс.</h1>
-          <p class="lead narrow">Здесь я показываю не просто экраны, а логику решений: от проблемы и ограничений до пользовательского сценария, компромиссов и ожидаемого продуктового эффекта.</p>
+          <p class="lead narrow">Не просто экраны, а логика решений: от проблемы и ограничений до пользовательского сценария, компромиссов и измеримого продуктового эффекта.</p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card card">
-            <div class="project-media placeholder-media">
-              <!-- Замените изображение: assets/img/projects/neiromasha/card-cover.jpg -->
-              <span>НейроМаша</span>
+            <div class="project-media">
+              <img src="Кабинет андеррайтера/11. Thumbnail.png" alt="Кабинет андеррайтера — Парки ЮЛ, ОСАГО" style="border-radius: calc(var(--radius) - 4px); width: 100%; object-fit: contain;">
+            </div>
+            <div class="meta-row">
+              <span>UX/UI designer</span>
+              <span>Полис</span>
+            </div>
+            <h2>Кабинет андеррайтера</h2>
+            <p>Рабочий инструмент для согласования ОСАГО юрлиц с автопарками до 1000+ ТС. Кейс о системном дизайне сложного B2B-процесса с массовыми операциями и ветвящимися сценариями.</p>
+            <ul class="compact-list">
+              <li>Web app · B2B · Команда БыстроДеньги</li>
+              <li>20+ экранов, 6+ статусов, массовые операции</li>
+              <li>Дизайн-система тултипов и контекстная помощь</li>
+            </ul>
+            <a class="text-link" href="project-underwriter.html">Открыть кейс</a>
+          </article>
+
+          <article class="project-card card">
+            <div class="project-media">
+              <img src="НейроМаша/neromacha-product-present.png" alt="НейроМаша — распознавание описи имущества" style="border-radius: calc(var(--radius) - 4px); width: 100%; object-fit: contain;">
             </div>
             <div class="meta-row">
               <span>UX/UI designer</span>
@@ -53,12 +71,22 @@
             <a class="text-link" href="project-neiromasha.html">Открыть кейс</a>
           </article>
 
-          <article class="project-card card muted-card">
-            <div class="project-media placeholder-media">
-              <span>Следующий проект</span>
+          <article class="project-card card">
+            <div class="project-media">
+              <img src="ВЗР/VZR.png" alt="Страхование путешествующих — калькулятор ВЗР" style="border-radius: calc(var(--radius) - 4px); width: 100%; object-fit: contain;">
             </div>
-            <h2>Новый кейс</h2>
-            <p>Этот блок можно использовать для следующего проекта, когда вы будете готовы добавить ещё один case study.</p>
+            <div class="meta-row">
+              <span>UX/UI designer</span>
+              <span>АльфаСтрахование</span>
+            </div>
+            <h2>Калькулятор ВЗР</h2>
+            <p>Редизайн калькулятора страхования выезжающих за рубеж. Кейс о пошаговом сценарии оформления, сравнении программ, допродаже через визуальные карточки опций и гипотезах на основе тепловых карт.</p>
+            <ul class="compact-list">
+              <li>Web app · B2C / B2B · АльфаПолис</li>
+              <li>27+ экранов, 4 этапа оформления, 6 гипотез</li>
+              <li>Аналитика тепловых карт и продуктовые гипотезы</li>
+            </ul>
+            <a class="text-link" href="project-vzr.html">Открыть кейс</a>
           </article>
         </div>
       </div>
@@ -68,9 +96,9 @@
       <div class="container footer-wrap">
         <p>© 2026 Полина Дуксо</p>
         <div class="footer-links">
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="projects.html">Проекты</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contact.html">Контакты</a>
         </div>
       </div>
     </footer>

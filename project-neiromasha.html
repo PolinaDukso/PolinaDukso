@@ -17,10 +17,10 @@
         <a class="brand" href="index.html">Полина Дуксо</a>
         <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
         <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html">Главная</a>
+          <a href="projects.html">Проекты</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contact.html">Контакты</a>
         </nav>
       </div>
     </header>
@@ -43,9 +43,8 @@
               <span>3 месяца</span>
             </div>
           </div>
-          <div class="project-media placeholder-media large-media">
-            <!-- Замените изображение: assets/img/projects/neiromasha/hero.jpg -->
-            <span>Hero image проекта</span>
+          <div class="project-media large-media">
+            <img src="НейроМаша/neromacha-product-present.png" alt="НейроМаша — распознавание описи имущества" style="border-radius: calc(var(--radius) - 4px); width: 100%; height: 100%; object-fit: contain;">
           </div>
         </div>
       </section>
@@ -73,11 +72,11 @@
           <article class="case-content">
             <section id="overview" class="case-section">
               <h2>Обзор проекта</h2>
-              <div class="fact-grid">
+              <div class="stats-grid">
                 <div class="card fact-card"><span>Продукт</span><strong>АльфаПолис</strong></div>
                 <div class="card fact-card"><span>Функция</span><strong>НейроМаша</strong></div>
-                <div class="card fact-card"><span>Роль</span><strong>UX/UI designer</strong></div>
-                <div class="card fact-card"><span>Команда</span><strong>Я + разработчики</strong></div>
+                <div class="card fact-card"><span>Роль</span><strong>UX/UI дизайнер</strong></div>
+                <div class="card fact-card"><span>Команда</span><strong>Дизайн + разработка</strong></div>
               </div>
               <p>
                 НейроМаша — функция распознавания описи имущества с помощью нейросети внутри платформы АльфаПолис.
@@ -149,22 +148,26 @@
             <section id="jobs" class="case-section">
               <h2>Job Stories</h2>
               <div class="jobs-grid">
-                <article class="card">
+                <article class="card job-story-card">
+                  <span class="job-number">01</span>
                   <p class="job-prefix">Когда я оформляю страховой полис имущества,</p>
                   <p class="job-body">я хочу автоматически внести объекты страхования,</p>
                   <p class="job-result">чтобы не тратить время на ручной ввод позиций.</p>
                 </article>
-                <article class="card">
+                <article class="card job-story-card">
+                  <span class="job-number">02</span>
                   <p class="job-prefix">Когда я рассчитываю стоимость полиса,</p>
                   <p class="job-body">я хочу быстро работать с перечнем объектов от клиента,</p>
                   <p class="job-result">чтобы получить точную персональную стоимость полиса.</p>
                 </article>
-                <article class="card">
+                <article class="card job-story-card">
+                  <span class="job-number">03</span>
                   <p class="job-prefix">Когда я оформляю полис имущества,</p>
                   <p class="job-body">я хочу корректно заполнить опись,</p>
                   <p class="job-result">чтобы не тратить время на сопровождение спорных убытков.</p>
                 </article>
-                <article class="card">
+                <article class="card job-story-card">
+                  <span class="job-number">04</span>
                   <p class="job-prefix">Когда я продаю страховой полис,</p>
                   <p class="job-body">я хочу обеспечить клиенту максимальную защиту,</p>
                   <p class="job-result">чтобы в случае убытков выплата была быстрой и бесспорной.</p>
@@ -194,33 +197,33 @@
                 После запуска MVP я собрала список гипотез и запустила расширенный опрос в UX Feedback, чтобы понять, как агенты реально работают с описью имущества,
                 какие барьеры есть в сценарии загрузки и насколько текущее поведение нейросети соответствует их ожиданиям.
               </p>
-              <div class="timeline-list">
-                <article class="card">
-                  <h3>Гипотеза 1</h3>
+              <div class="hypothesis-grid">
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H1</span>
                   <p>Поддерживаемые форматы файлов не полностью закрывают реальные пользовательские сценарии.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 2</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H2</span>
                   <p>Агенты выполняют дополнительные ручные действия, чтобы привести опись к техническим требованиям системы.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 3</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H3</span>
                   <p>Пользователи не замечают требования к файлам и сталкиваются с ошибками уже после попытки загрузки.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 4</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H4</span>
                   <p>Ошибки и способы их исправления могут быть непонятны агентам.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 5</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H5</span>
                   <p>Пользователи могут воспринимать время распознавания как избыточно длительное.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 6</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H6</span>
                   <p>На этапе распознавания пользователям не хватает ощущения контроля и прозрачности процесса.</p>
                 </article>
-                <article class="card">
-                  <h3>Гипотеза 7</h3>
+                <article class="card hypothesis-card">
+                  <span class="hypothesis-num">H7</span>
                   <p>Пользователям важно видеть объекты, распознанные нейросетью, но не добавленные в итоговую опись.</p>
                 </article>
               </div>
@@ -228,27 +231,54 @@
 
             <section id="insights" class="case-section">
               <h2>Ключевые инсайты</h2>
-              <div class="insight-list">
-                <article class="card insight-card">
-                  <h3>Проблема начиналась ещё до распознавания</h3>
-                  <p class="insight-meta">Наблюдение</p>
-                  <p>Большинству пользователей приходилось преобразовывать опись перед загрузкой.</p>
-                  <p class="insight-meta">Вывод</p>
-                  <p>Нужно проектировать не только распознавание, но и вход в сценарий: требования, форматы, ошибки и ожидания.</p>
+              <div class="insights-stack">
+                <article class="card insight-card-wide">
+                  <div class="insight-header">
+                    <span class="insight-num">01</span>
+                    <h3>Проблема начиналась ещё до распознавания</h3>
+                  </div>
+                  <div class="insight-columns">
+                    <div>
+                      <p class="insight-meta">Наблюдение</p>
+                      <p>Большинству пользователей приходилось преобразовывать опись перед загрузкой.</p>
+                    </div>
+                    <div>
+                      <p class="insight-meta">Вывод</p>
+                      <p>Нужно проектировать не только распознавание, но и вход в сценарий: требования, форматы, ошибки и ожидания.</p>
+                    </div>
+                  </div>
                 </article>
-                <article class="card insight-card">
-                  <h3>Пользователям нужна прозрачность процесса</h3>
-                  <p class="insight-meta">Наблюдение</p>
-                  <p>Агенты хотели лучше понимать, что происходит во время распознавания и сколько ещё ждать результат.</p>
-                  <p class="insight-meta">Вывод</p>
-                  <p>Даже при технических ограничениях интерфейс должен был давать понятную обратную связь и снижать тревожность ожидания.</p>
+                <article class="card insight-card-wide">
+                  <div class="insight-header">
+                    <span class="insight-num">02</span>
+                    <h3>Пользователям нужна прозрачность процесса</h3>
+                  </div>
+                  <div class="insight-columns">
+                    <div>
+                      <p class="insight-meta">Наблюдение</p>
+                      <p>Агенты хотели лучше понимать, что происходит во время распознавания и сколько ещё ждать результат.</p>
+                    </div>
+                    <div>
+                      <p class="insight-meta">Вывод</p>
+                      <p>Даже при технических ограничениях интерфейс должен был давать понятную обратную связь и снижать тревожность ожидания.</p>
+                    </div>
+                  </div>
                 </article>
-                <article class="card insight-card">
-                  <h3>Автоматизация не отменяет ручную проверку</h3>
-                  <p class="insight-meta">Наблюдение</p>
-                  <p>Если часть объектов не попадала в опись и пользователь не добавлял их вручную, они не учитывались в оформлении.</p>
-                  <p class="insight-meta">Вывод</p>
-                  <p>НейроМашу нужно было проектировать как controlled automation flow, а не как полностью автономный сценарий.</p>
+                <article class="card insight-card-wide">
+                  <div class="insight-header">
+                    <span class="insight-num">03</span>
+                    <h3>Автоматизация не отменяет ручную проверку</h3>
+                  </div>
+                  <div class="insight-columns">
+                    <div>
+                      <p class="insight-meta">Наблюдение</p>
+                      <p>Если часть объектов не попадала в опись и пользователь не добавлял их вручную, они не учитывались в оформлении.</p>
+                    </div>
+                    <div>
+                      <p class="insight-meta">Вывод</p>
+                      <p>НейроМашу нужно было проектировать как управляемый процесс автоматизации, а не как полностью автономный сценарий.</p>
+                    </div>
+                  </div>
                 </article>
               </div>
             </section>
@@ -295,7 +325,7 @@
               <h2>Результаты</h2>
               <div class="results-grid">
                 <article class="card">
-                  <h3>Подтверждённо</h3>
+                  <h3>Подтверждено</h3>
                   <p>Средняя оценка сервиса по результатам опроса составила <strong>4.28</strong>.</p>
                 </article>
                 <article class="card">
@@ -335,9 +365,9 @@
       <div class="container footer-wrap">
         <p>© 2026 Полина Дуксо</p>
         <div class="footer-links">
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="projects.html">Проекты</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contact.html">Контакты</a>
         </div>
       </div>
     </footer>
