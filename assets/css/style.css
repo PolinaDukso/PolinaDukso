@@ -224,6 +224,7 @@ h3 { font-size: 22px; }
   text-align: center;
   padding: 24px;
 }
+.project-media { margin-bottom: 16px; }
 .large-media { min-height: 420px; }
 .wide-media { min-height: 360px; margin-top: 20px; }
 
