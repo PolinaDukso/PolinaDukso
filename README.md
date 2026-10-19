@@ -1,34 +1,36 @@
 # Portfolio site for GitHub Pages
 
 ## Структура
-- index.html
-- projects.html
-- about.html
-- contact.html
-- project-neiromasha.html
-- assets/css/style.css
-- assets/js/main.js
-- assets/img/
+- `index.html` — главная: герой, три кейса, подход, CTA
+- `projects.html` — список кейсов
+- `project-underwriter.html`, `project-neiromasha.html`, `project-vzr.html` — case study
+- `about.html`, `contact.html`
+- `assets/css/style.css`, `assets/js/main.js`, `assets/img/favicon.svg`
+- `Кабинет андеррайтера/`, `НейроМаша/`, `ВЗР/` — скриншоты макетов
 
 ## Что заменить перед публикацией
-1. Контакты в `contact.html`
-2. Плейсхолдеры изображений на реальные скриншоты проекта
-3. При желании — тексты на главной и в About
+1. Контакты в `contact.html` — сейчас там заглушки `your-email@example.com`, `@your_username`, `your-profile`.
+2. В `project-neiromasha.html` (раздел «Решение») оставлен комментарий `TODO` — место для скриншота экрана результата распознавания.
 
-## Куда вставлять изображения
-Создайте файлы в папках:
-- `assets/img/projects/neiromasha/cover.jpg`
-- `assets/img/projects/neiromasha/card-cover.jpg`
-- `assets/img/projects/neiromasha/hero.jpg`
-- `assets/img/projects/neiromasha/result-screen.jpg`
-
-После этого замените блоки с классом `placeholder-media` на обычные теги img.
-
-Пример:
+## Как вставлять скриншоты
+Скриншот кладётся в рамку `.shot` (светлая подложка `#f7f8fb`, пропорция 16:9, картинка не растягивается больше натурального размера):
 ```html
-<div class="project-media">
-  <img src="assets/img/projects/neiromasha/hero.jpg" alt="НейроМаша — экран распознавания описи имущества">
+<div class="shot">
+  <img src="НейроМаша/screen.png" alt="Что изображено на экране">
 </div>
+```
+- `shot shot-cover` — для готовых обложек: картинка заполняет рамку целиком.
+- `shot shot-natural` — для широких скриншотов внутри кейса: рамка подстраивается под высоту картинки.
+- атрибут `data-zoom` на рамке — клик по скриншоту открывает его в полном размере.
+
+Внутри кейса скриншот с подписью:
+```html
+<figure class="case-figure">
+  <div class="shot shot-natural" data-zoom>
+    <img src="Кабинет андеррайтера/3. Work Zone cropped.png" alt="Work Zone" loading="lazy">
+  </div>
+  <figcaption>Подпись к скриншоту</figcaption>
+</figure>
 ```
 
 ## Как опубликовать на GitHub Pages
