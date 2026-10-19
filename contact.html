@@ -7,51 +7,45 @@
   <meta name="description" content="Связаться с Полиной Дуксо по вопросам роли Product Designer, UX/UI дизайна и продуктовых кейсов.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0f1020">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <a class="skip-link" href="#main">К содержанию</a>
   <div class="site-shell">
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html">Полина Дуксо</a>
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-        <nav class="site-nav">
+        <button class="nav-toggle" type="button" aria-label="Меню" aria-controls="site-nav" aria-expanded="false">☰</button>
+        <nav class="site-nav" id="site-nav" aria-label="Основное меню">
           <a href="index.html">Главная</a>
-          <a href="projects.html">Проекты</a>
+          <a href="projects.html">Кейсы</a>
           <a href="about.html">Обо мне</a>
-          <a class="is-active" href="contact.html">Контакты</a>
+          <a class="is-active" href="contact.html" aria-current="page">Контакты</a>
         </nav>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container contact-layout">
-        <div class="page-head narrow">
-          <a class="back-link" href="index.html">← На главную</a>
-          <p class="eyebrow">Контакты</p>
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
           <h1>Давайте обсудим ваш проект или задачу.</h1>
           <p class="lead">Свяжитесь со мной удобным способом — отвечаю в течение дня.</p>
         </div>
+      </section>
 
-        <div class="contact-grid">
-          <article class="card contact-card">
-            <h2>Email</h2>
-            <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
-          </article>
-          <article class="card contact-card">
-            <h2>Telegram</h2>
-            <p><a href="https://t.me/your_username" target="_blank" rel="noopener noreferrer">@your_username</a></p>
-          </article>
-          <article class="card contact-card">
-            <h2>LinkedIn</h2>
-            <p><a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></p>
-          </article>
-        </div>
+      <div class="container prose">
+        <section>
+          <dl class="facts">
+            <div><dt>Email</dt><dd><a href="mailto:your-email@example.com">your-email@example.com</a></dd></div>
+            <div><dt>Telegram</dt><dd><a href="https://t.me/your_username" target="_blank" rel="noopener noreferrer">@your_username</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></dd></div>
+          </dl>
+        </section>
 
-        <div class="card prose-block" style="margin-top: 32px">
+        <section>
           <h2>Чем могу быть полезна</h2>
           <ul>
             <li>Продуктовый дизайн и UX/UI для сложных B2B-сценариев</li>
@@ -59,7 +53,7 @@
             <li>Тестовое задание или пробный проект</li>
             <li>Знакомство с командой и обсуждение роли</li>
           </ul>
-        </div>
+        </section>
       </div>
     </main>
 
@@ -67,7 +61,7 @@
       <div class="container footer-wrap">
         <p>© 2026 Полина Дуксо</p>
         <div class="footer-links">
-          <a href="projects.html">Проекты</a>
+          <a href="projects.html">Кейсы</a>
           <a href="about.html">Обо мне</a>
           <a href="contact.html">Контакты</a>
         </div>

@@ -4,173 +4,156 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Полина Дуксо — Product Designer | UX/UI портфолио</title>
-  <meta name="description" content="Портфолио Полины Дуксо — UX/UI designer с фокусом на product thinking, системный дизайн и глубокие case study.">
+  <meta name="description" content="Портфолио Полины Дуксо — продуктовый дизайнер. Интерфейсы для сложных страховых процессов: кабинет андеррайтера, AI-распознавание описи имущества, калькулятор ВЗР.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0f1020">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <a class="skip-link" href="#main">К содержанию</a>
   <div class="site-shell">
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html">Полина Дуксо</a>
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-        <nav class="site-nav">
-          <a class="is-active" href="index.html">Главная</a>
-          <a href="projects.html">Проекты</a>
+        <button class="nav-toggle" type="button" aria-label="Меню" aria-controls="site-nav" aria-expanded="false">☰</button>
+        <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+          <a class="is-active" href="index.html" aria-current="page">Главная</a>
+          <a href="projects.html">Кейсы</a>
           <a href="about.html">Обо мне</a>
           <a href="contact.html">Контакты</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Продуктовый дизайнер · UX/UI · 4 года опыта</p>
-            <h1>Проектирую цифровые продукты, где UX-решения опираются на процесс, ограничения и поведение пользователей.</h1>
-            <p class="lead">
-              Я — Полина Дуксо, UX/UI дизайнер с сильным фокусом на продуктовое мышление, пользовательские сценарии,
-              системный дизайн и глубокую проработку интерфейсов для сложных B2B и страховых продуктов.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#cases">Смотреть кейсы</a>
-              <a class="button button-secondary" href="contact.html">Связаться</a>
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <h1>Проектирую интерфейсы для сложных страховых процессов: заявок, описей и полисов.</h1>
+
+          <div class="hero-grid">
+            <div>
+              <div class="intro">
+                <img class="avatar" src="photo.jpg" alt="Полина Дуксо" width="375" height="500">
+                <p class="lead">
+                  Я Полина Дуксо, продуктовый дизайнер, 4 года опыта — в&nbsp;основном B2B и страхование.
+                  Разбираю процесс, ограничения и поведение пользователей, а потом довожу решение до интерфейса.
+                </p>
+              </div>
+              <div class="actions">
+                <a class="button" href="#cases">Смотреть кейсы</a>
+                <a href="contact.html">Контакты</a>
+              </div>
             </div>
+
+            <figure class="demo">
+              <div class="demo-mount">
+                <div class="demo-card" aria-hidden="true">
+                  <div class="demo-head">
+                    <div>
+                      <p class="demo-id">Заявка 789452</p>
+                      <p class="demo-meta">от 17.01.26, Большакова И. В.</p>
+                    </div>
+                    <span class="demo-status">
+                      <span class="badge badge-new">Новая</span>
+                      <span class="badge badge-work">В работе</span>
+                      <span class="badge badge-done">Согласовано</span>
+                    </span>
+                  </div>
+                  <dl class="demo-sum">
+                    <div><dt>Всего ТС в парке страхователя</dt><dd>1&nbsp;000</dd></div>
+                    <div><dt>Заявлено к страхованию</dt><dd>300</dd></div>
+                    <div><dt>Итого премия ОСАГО</dt><dd>4&nbsp;500&nbsp;000&nbsp;₽</dd></div>
+                  </dl>
+                  <p class="demo-label">История изменений</p>
+                  <ol class="demo-log">
+                    <li class="log-done"><time>17.01 12:08</time><span class="badge badge-done">Согласовано</span><span>МРЦ</span></li>
+                    <li class="log-work"><time>17.01 12:08</time><span class="badge badge-work">В работе</span><span>МРЦ</span></li>
+                    <li class="log-new"><time>17.01 12:08</time><span class="badge badge-new">Новая</span><span>AlfaFriend</span></li>
+                  </ol>
+                </div>
+              </div>
+              <figcaption>Заявка на ОСАГО для автопарка в кабинете андеррайтера — интерфейс из первого кейса.</figcaption>
+            </figure>
           </div>
-          <aside class="hero-card card">
-            <img src="photo.jpg" alt="Полина Дуксо" style="width: 100%; aspect-ratio: 1/1; border-radius: calc(var(--radius) - 4px); object-fit: cover; object-position: top; margin-bottom: 20px;">
-            <p class="card-label">Фокус в работе</p>
-            <ul class="feature-list">
-              <li>Исследование пользовательских сценариев</li>
-              <li>Продуктовое мышление</li>
-              <li>UI-кит и компонентный подход</li>
-              <li>Системная работа в Figma</li>
-              <li>UX-проработка сложных сценариев</li>
-            </ul>
-          </aside>
         </div>
       </section>
 
       <section class="section" id="cases">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Кейсы</p>
-            <h2>От B2B-кабинета до <span class="nowrap">AI-функции</span></h2>
-            <p class="section-text">Три проекта, в которых интерфейс опирается на бизнес-логику, ограничения системы и реальный рабочий процесс пользователя.</p>
+            <h2>Кейсы</h2>
           </div>
 
-          <div class="case-list">
-            <article class="project-highlight card card-grid">
-              <div class="shot">
-                <img src="Кабинет андеррайтера/3. Work Zone cropped.png" alt="Кабинет андеррайтера — рабочая зона с историей изменений заявки и саммари по парку" loading="lazy">
-              </div>
-              <div class="project-copy">
-                <div class="meta-row">
-                  <span>Полис</span>
-                  <span>Web app · B2B</span>
-                  <span>Команда БыстроДеньги</span>
-                </div>
-                <h3>Кабинет андеррайтера</h3>
-                <p>
-                  Рабочий инструмент для согласования ОСАГО юрлиц с автопарками до 1000+ ТС.
-                  Я спроектировала флоу из 20+ экранов: от получения заявки до финального решения,
-                  со всеми статусами, ветвлениями и массовыми операциями.
-                </p>
-                <ul class="compact-list">
-                  <li>3 типа массовых операций вместо поштучной обработки ТС</li>
-                  <li>Статусная модель и история изменений для командной работы</li>
-                  <li>Система тултипов и дровер с пояснениями тарифных настроек</li>
-                </ul>
-                <a class="text-link" href="project-underwriter.html">Открыть кейс</a>
-              </div>
-            </article>
+          <article class="case-entry">
+            <div>
+              <h3><a href="project-underwriter.html">Кабинет андеррайтера</a></h3>
+              <p>
+                Рабочий инструмент для согласования ОСАГО юрлиц с автопарками до 1000+ ТС:
+                от получения заявки до финального решения, со статусами, ветвлениями и массовыми операциями.
+              </p>
+              <dl class="facts">
+                <div><dt>Продукт</dt><dd>Полис</dd></div>
+                <div><dt>Формат</dt><dd>Web, B2B</dd></div>
+                <div><dt>Объём</dt><dd>20+ экранов, 6+ статусов</dd></div>
+              </dl>
+              <a href="project-underwriter.html">Открыть кейс<span class="visually-hidden"> «Кабинет андеррайтера»</span></a>
+            </div>
+            <a class="shot" href="project-underwriter.html" tabindex="-1" aria-hidden="true">
+              <img src="Кабинет андеррайтера/3. Work Zone cropped.png" alt="" loading="lazy">
+            </a>
+          </article>
 
-            <article class="project-highlight card card-grid">
-              <div class="shot">
-                <img src="НейроМаша/neromacha-product-present.png" alt="НейроМаша — экран ожидания распознавания описи имущества" loading="lazy">
-              </div>
-              <div class="project-copy">
-                <div class="meta-row">
-                  <span>АльфаПолис</span>
-                  <span>Web app · B2B</span>
-                  <span>3 месяца</span>
-                </div>
-                <h3>НейроМаша</h3>
-                <p>
-                  Встроенная в АльфаПолис функция распознавания описи имущества с помощью нейросети.
-                  Я спроектировала сценарий от загрузки файлов и обработки ошибок до проверки результата, ручного
-                  дополнения списка и перехода к расчёту полиса.
-                </p>
-                <ul class="compact-list">
-                  <li>Сместила фокус сценария с ручного ввода на проверку результата</li>
-                  <li>Учла ограничения MVP и качество неидеальных входных данных</li>
-                  <li>Собрала гипотезы и валидировала их через UX Feedback</li>
-                </ul>
-                <a class="text-link" href="project-neiromasha.html">Открыть кейс</a>
-              </div>
-            </article>
+          <article class="case-entry">
+            <div>
+              <h3><a href="project-neiromasha.html">НейроМаша</a></h3>
+              <p>
+                Распознавание описи имущества нейросетью внутри АльфаПолиса. Сценарий от загрузки файлов
+                и ошибок до проверки результата и ручного дополнения списка.
+              </p>
+              <dl class="facts">
+                <div><dt>Продукт</dt><dd>АльфаПолис</dd></div>
+                <div><dt>Формат</dt><dd>Web, B2B</dd></div>
+                <div><dt>Срок</dt><dd>3 месяца, MVP</dd></div>
+              </dl>
+              <a href="project-neiromasha.html">Открыть кейс<span class="visually-hidden"> «НейроМаша»</span></a>
+            </div>
+            <a class="shot shot-fit" href="project-neiromasha.html" tabindex="-1" aria-hidden="true">
+              <img src="НейроМаша/neromacha-product-present.png" alt="" loading="lazy">
+            </a>
+          </article>
 
-            <article class="project-highlight card card-grid">
-              <div class="shot">
-                <img src="ВЗР/VZR.png" alt="Калькулятор ВЗР — шаг расчёта и выбора программы" loading="lazy">
-              </div>
-              <div class="project-copy">
-                <div class="meta-row">
-                  <span>АльфаСтрахование</span>
-                  <span>Web app · B2C / B2B</span>
-                </div>
-                <h3>Калькулятор ВЗР</h3>
-                <p>
-                  Редизайн калькулятора страхования выезжающих за рубеж: вместо длинной одностраничной формы —
-                  пошаговый сценарий с понятным сравнением программ и допродажей через визуальные карточки опций.
-                </p>
-                <ul class="compact-list">
-                  <li>4 этапа оформления и sticky-панель с живым пересчётом цены</li>
-                  <li>Карточки программ, таблица сравнения и карточки допопций</li>
-                  <li>6 гипотез на основе тепловых карт и данных воронки</li>
-                </ul>
-                <a class="text-link" href="project-vzr.html">Открыть кейс</a>
-              </div>
-            </article>
-          </div>
+          <article class="case-entry">
+            <div>
+              <h3><a href="project-vzr.html">Калькулятор ВЗР</a></h3>
+              <p>
+                Редизайн калькулятора страхования выезжающих за рубеж: вместо длинной формы — четыре шага,
+                понятное сравнение программ и дополнительные опции с ценами.
+              </p>
+              <dl class="facts">
+                <div><dt>Компания</dt><dd>АльфаСтрахование</dd></div>
+                <div><dt>Формат</dt><dd>Web, B2C и B2B</dd></div>
+                <div><dt>Объём</dt><dd>27+ экранов, 6 гипотез</dd></div>
+              </dl>
+              <a href="project-vzr.html">Открыть кейс<span class="visually-hidden"> «Калькулятор ВЗР»</span></a>
+            </div>
+            <a class="shot" href="project-vzr.html" tabindex="-1" aria-hidden="true">
+              <img src="ВЗР/VZR cropped.png" alt="" loading="lazy">
+            </a>
+          </article>
         </div>
       </section>
 
-      <section class="section section-soft">
+      <section class="section closing">
         <div class="container">
-          <div class="section-head narrow">
-            <p class="eyebrow">Мой подход</p>
-            <h2>Сначала логика продукта, потом интерфейс</h2>
+          <h2>Ищу роль Product Designer</h2>
+          <p>В команде, где важны системность, глубина UX и продуктовая логика.</p>
+          <div class="actions">
+            <a class="button" href="contact.html">Связаться</a>
+            <a href="about.html">Обо мне</a>
           </div>
-          <div class="approach-grid">
-            <article class="card">
-              <h3>Исследую контекст задачи</h3>
-              <p>Разбираю, где именно пользователь теряет время, контроль или уверенность, и как это влияет на бизнес-результат.</p>
-            </article>
-            <article class="card">
-              <h3>Проектирую сценарии, а не экраны</h3>
-              <p>Уделяю внимание состояниям, ошибкам, разветвлениям, компромиссам и переходам между шагами процесса.</p>
-            </article>
-            <article class="card">
-              <h3>Довожу решения до системы</h3>
-              <p>Собираю устойчивые UI-паттерны, работаю с компонентами и делаю решения удобными для дальнейшего развития продукта.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container cta-box card">
-          <div>
-            <p class="eyebrow">Open to work</p>
-            <h2>Ищу роль Product Designer, где важны системность, глубина UX и продуктовая логика.</h2>
-          </div>
-          <a class="button button-primary" href="contact.html">Обсудить сотрудничество</a>
         </div>
       </section>
     </main>
@@ -179,7 +162,7 @@
       <div class="container footer-wrap">
         <p>© 2026 Полина Дуксо</p>
         <div class="footer-links">
-          <a href="projects.html">Проекты</a>
+          <a href="projects.html">Кейсы</a>
           <a href="about.html">Обо мне</a>
           <a href="contact.html">Контакты</a>
         </div>
