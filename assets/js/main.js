@@ -35,7 +35,7 @@ if (toggleButton && navigation) {
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-// Home hero: the application card goes through its statuses once it is on screen
+// Home case list: the application card goes through its statuses once it is on screen
 const demo = document.querySelector('.demo');
 if (demo && 'IntersectionObserver' in window && !reduceMotion.matches) {
   demo.classList.add('is-armed');
