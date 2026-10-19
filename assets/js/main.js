@@ -35,17 +35,45 @@ if (toggleButton && navigation) {
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-// Home case list: the application card goes through its statuses once it is on screen
+// Home case list: the application card goes through its statuses once the
+// reader has scrolled to it and the whole card is on screen
 const demo = document.querySelector('.demo');
 if (demo && 'IntersectionObserver' in window && !reduceMotion.matches) {
   demo.classList.add('is-armed');
-  const observer = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting)) {
-      demo.classList.add('is-playing');
-      observer.disconnect();
-    }
-  }, { threshold: 0.5 });
+  const siteHeader = document.querySelector('.site-header');
+  let scrolled = false;
+  let inView = false;
+  let timer = null;
+
+  const play = () => {
+    demo.classList.add('is-playing');
+    observer.disconnect();
+    window.removeEventListener('scroll', onScroll);
+  };
+  // a short dwell, so a card that is only scrolled past does not play unseen
+  const update = () => {
+    clearTimeout(timer);
+    if (scrolled && inView) timer = setTimeout(play, 400);
+  };
+  // a card already visible on a tall screen waits for the first scroll
+  const onScroll = () => {
+    if (scrolled) return;
+    scrolled = true;
+    update();
+  };
+
+  const observer = new IntersectionObserver(([entry]) => {
+    const viewport = entry.rootBounds ? entry.rootBounds.height : window.innerHeight;
+    // a card taller than the screen counts as seen when it fills most of it
+    inView = entry.isIntersecting
+      && (entry.intersectionRatio > 0.95 || entry.intersectionRect.height >= viewport * 0.8);
+    update();
+  }, {
+    rootMargin: `-${siteHeader ? siteHeader.offsetHeight : 0}px 0px 0px 0px`,
+    threshold: Array.from({ length: 21 }, (_, i) => i / 20),
+  });
   observer.observe(demo);
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 // Case study TOC: highlight current section on scroll
