@@ -208,13 +208,15 @@ button:focus-visible,
   align-items: start;
   margin-top: 40px;
 }
-.intro { display: flex; align-items: flex-start; gap: 20px; }
-.avatar {
+/* the portrait sits above the lead; on a tablet they share a row */
+.intro { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+.portrait {
   flex: 0 0 auto;
-  width: 72px;
-  height: 96px;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 .intro .lead { margin: 0; }
 .hero .actions { margin-top: 36px; }
@@ -263,18 +265,28 @@ button:focus-visible,
 .demo-sum div:last-child dt { color: var(--ink); }
 .demo-sum div:last-child dd { font-size: 18px; }
 .demo-card .demo-label { margin: 24px 0 8px; font-size: 13px; color: var(--pencil); }
-.demo-log { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+/* rows share the list's columns, so every group name starts at the same x */
+.demo-log {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  column-gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
 .demo-log li {
   display: grid;
-  grid-template-columns: 7em auto minmax(0, 1fr);
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
   align-items: center;
-  gap: 16px;
   margin: 0;
   padding: 10px 0;
   border-bottom: 1px solid var(--rule);
 }
 .demo-log li:last-child { border-bottom: 0; padding-bottom: 0; }
 .demo-log time { color: var(--pencil); font-variant-numeric: tabular-nums; }
+.demo-log .badge { justify-self: start; }
 .demo-log li > span:last-child { color: var(--pencil); }
 .demo figcaption { margin-top: 12px; font-size: 15px; color: var(--pencil); }
 
@@ -388,6 +400,8 @@ button:focus-visible,
   display: block;
   margin: 0;
   aspect-ratio: 16 / 10;
+  /* white mockups cut at the edge would otherwise run into the white page */
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
   background: var(--paper);
   overflow: hidden;
@@ -694,6 +708,7 @@ html:has(.lightbox[open]) { overflow: hidden; }
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero-grid > div:first-child { max-width: var(--measure); }
+  .intro { flex-direction: row; }
 
   .case-body { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .case-content { max-width: var(--measure); }
@@ -752,11 +767,12 @@ html:has(.lightbox[open]) { overflow: hidden; }
 
   .hero { padding: 40px 0 64px; }
   .hero-grid { margin-top: 28px; }
-  .intro { flex-direction: column; gap: 16px; }
+  .intro { flex-direction: column; gap: 20px; }
+  .portrait { width: 168px; }
   .lead { font-size: 19px; }
   .demo-mount { padding: 12px; }
   .demo-card { padding: 16px; font-size: 14px; }
-  .demo-log li { grid-template-columns: auto auto minmax(0, 1fr); gap: 10px; }
+  .demo-log { column-gap: 10px; }
 
   .section { padding: 64px 0; }
   .case-entry { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 36px 0; }
