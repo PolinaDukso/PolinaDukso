@@ -7,80 +7,80 @@
   <meta name="description" content="О Полине Дуксо: UX/UI designer с опытом 4 года, фокусом на product thinking, системный дизайн и сложные пользовательские сценарии.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0f1020">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <a class="skip-link" href="#main">К содержанию</a>
   <div class="site-shell">
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html">Полина Дуксо</a>
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-        <nav class="site-nav">
+        <button class="nav-toggle" type="button" aria-label="Меню" aria-controls="site-nav" aria-expanded="false">☰</button>
+        <nav class="site-nav" id="site-nav" aria-label="Основное меню">
           <a href="index.html">Главная</a>
-          <a href="projects.html">Проекты</a>
-          <a class="is-active" href="about.html">Обо мне</a>
+          <a href="projects.html">Кейсы</a>
+          <a class="is-active" href="about.html" aria-current="page">Обо мне</a>
           <a href="contact.html">Контакты</a>
         </nav>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container about-layout">
-        <div class="page-head">
-          <p class="eyebrow">Обо мне</p>
-          <h1 style="max-width: none">Я проектирую продукты, в которых интерфейс помогает пользователю пройти сложный процесс без лишней нагрузки.</h1>
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <h1>Я проектирую продукты, в&nbsp;которых интерфейс помогает пользователю пройти сложный процесс без лишней нагрузки.</h1>
         </div>
+      </section>
 
-        <div class="about-grid">
-          <article class="card prose-block">
-            <h2>Кто я</h2>
-            <p>
-              Меня зовут Полина Дуксо. UX/UI дизайнер, 4 года опыта, фокус — продуктовый дизайн.
-              Работаю с продуктами, где интерфейс связан с бизнес-логикой,
-              ограничениями системы, качеством данных и реальным поведением пользователей.
-            </p>
-            <p>
-              Основной опыт — сложные B2B и страховые сценарии: разбор узких мест,
-              проектирование логики состояний, создание решений, понятных пользователю,
-              команде разработки и бизнесу.
-            </p>
-          </article>
+      <div class="container prose">
+        <section>
+          <h2>Кто я</h2>
+          <p>
+            Меня зовут Полина Дуксо. UX/UI дизайнер, 4 года опыта, фокус — продуктовый дизайн.
+            Работаю с продуктами, где интерфейс связан с бизнес-логикой,
+            ограничениями системы, качеством данных и реальным поведением пользователей.
+          </p>
+          <p>
+            Основной опыт — сложные B2B и страховые сценарии: разбор узких мест,
+            проектирование логики состояний, создание решений, понятных пользователю,
+            команде разработки и бизнесу.
+          </p>
+        </section>
 
-          <article class="card prose-block">
-            <h2>Мой подход</h2>
-            <p>Я работаю от продукта к интерфейсу:</p>
-            <ul>
-              <li>разбираю контекст, ограничения и цель сценария;</li>
-              <li>фиксирую пользовательские и бизнес-риски;</li>
-              <li>проектирую основную и аварийные ветки;</li>
-              <li>довожу решение до понятной UI-системы;</li>
-              <li>собираю обратную связь и перевожу её в следующие итерации.</li>
-            </ul>
-          </article>
+        <section>
+          <h2>Мой подход</h2>
+          <p>Я работаю от продукта к интерфейсу:</p>
+          <ul>
+            <li>разбираю контекст, ограничения и цель сценария;</li>
+            <li>фиксирую пользовательские и бизнес-риски;</li>
+            <li>проектирую основную и аварийные ветки;</li>
+            <li>довожу решение до понятной UI-системы;</li>
+            <li>собираю обратную связь и перевожу её в следующие итерации.</li>
+          </ul>
+        </section>
 
-          <article class="card prose-block">
-            <h2>Ключевые навыки</h2>
-            <div class="tag-cloud">
-              <span>Исследование сценариев</span>
-              <span>Продуктовое мышление</span>
-              <span>UX-тексты</span>
-              <span>Дизайн-системы</span>
-              <span>Figma</span>
-              <span>UI-кит</span>
-              <span>Информационная архитектура</span>
-              <span>Прототипирование</span>
-              <span>Глубокая UX-проработка</span>
-            </div>
-          </article>
+        <section>
+          <h2>Ключевые навыки</h2>
+          <ul class="columns">
+            <li>Исследование сценариев</li>
+            <li>Продуктовое мышление</li>
+            <li>UX-тексты</li>
+            <li>Дизайн-системы</li>
+            <li>Figma</li>
+            <li>UI-кит</li>
+            <li>Информационная архитектура</li>
+            <li>Прототипирование</li>
+            <li>Глубокая UX-проработка</li>
+          </ul>
+        </section>
 
-          <article class="card prose-block">
-            <h2>Инструменты</h2>
-            <p>Figma, прототипирование, компонентный подход, UX Feedback, структурирование гипотез, сценарное проектирование, работа с UI states и handoff в разработку.</p>
-          </article>
-        </div>
+        <section>
+          <h2>Инструменты</h2>
+          <p>Figma, прототипирование, компонентный подход, UX Feedback, структурирование гипотез, сценарное проектирование, работа с UI states и handoff в разработку.</p>
+        </section>
       </div>
     </main>
 
@@ -88,7 +88,7 @@
       <div class="container footer-wrap">
         <p>© 2026 Полина Дуксо</p>
         <div class="footer-links">
-          <a href="projects.html">Проекты</a>
+          <a href="projects.html">Кейсы</a>
           <a href="about.html">Обо мне</a>
           <a href="contact.html">Контакты</a>
         </div>

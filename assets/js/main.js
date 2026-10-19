@@ -22,6 +22,30 @@ if (toggleButton && navigation) {
       toggleButton.focus();
     }
   });
+
+  // an open menu must not cover whatever gets focus or a tap next
+  const header = toggleButton.closest('.site-header');
+  header.addEventListener('focusout', (event) => {
+    if (!header.contains(event.relatedTarget)) closeNav();
+  });
+  document.addEventListener('click', (event) => {
+    if (!header.contains(event.target)) closeNav();
+  });
+}
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+// Home hero: the application card goes through its statuses once it is on screen
+const demo = document.querySelector('.demo');
+if (demo && 'IntersectionObserver' in window && !reduceMotion.matches) {
+  demo.classList.add('is-armed');
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      demo.classList.add('is-playing');
+      observer.disconnect();
+    }
+  }, { threshold: 0.5 });
+  observer.observe(demo);
 }
 
 // Case study TOC: highlight current section on scroll
@@ -49,7 +73,7 @@ if (toc && tocLinks.length) {
     if (stripMode.matches) {
       tocNav.scrollTo({
         left: link.offsetLeft - tocNav.offsetLeft - (tocNav.clientWidth - link.offsetWidth) / 2,
-        behavior: 'smooth',
+        behavior: reduceMotion.matches ? 'auto' : 'smooth',
       });
     }
   }
@@ -88,6 +112,7 @@ if (zoomImages.length && typeof HTMLDialogElement === 'function') {
   const open = (img) => {
     fullImage.src = img.currentSrc || img.src;
     fullImage.alt = img.alt;
+    lightbox.setAttribute('aria-label', img.alt);
     lightbox.showModal();
   };
 
