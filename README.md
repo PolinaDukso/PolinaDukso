@@ -1,14 +1,14 @@
 # Portfolio site for GitHub Pages
 
 ## Структура
-- `index.html` — главная: заголовок, живая карточка заявки из кабинета андеррайтера, три кейса, CTA
+- `index.html` — главная: заголовок с фото, три кейса (у первого вместо скриншота живая карточка заявки из кабинета андеррайтера), CTA
 - `projects.html` — список кейсов
 - `project-underwriter.html`, `project-neiromasha.html`, `project-vzr.html` — case study
 - `about.html`, `contact.html`
 - `assets/css/style.css` (дизайн-система: токены цвета и шрифтов в `:root`), `assets/js/main.js`, `assets/img/favicon.svg`
 - `Кабинет андеррайтера/`, `НейроМаша/`, `ВЗР/` — скриншоты макетов (`* cropped.png` — обрезанные копии без пустых полей, оригиналы рядом)
 
-Прошлый тёмный вариант дизайна сохранён в ветке `design-v1-dark`.
+Прошлый тёмный вариант дизайна сохранён в ветке `design-v1-dark`. План доработок — в `PLAN.md`.
 
 ## Что заменить перед публикацией
 1. Контакты в `contact.html` — сейчас там заглушки `your-email@example.com`, `@your_username`, `your-profile`.
