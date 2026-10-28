@@ -37,7 +37,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 // Home case list: the application card goes through its statuses once the
 // reader has scrolled to it and the whole card is on screen
-const demo = document.querySelector('.demo');
+const demo = document.querySelector('.demo:not(.demo-static)');
 if (demo && 'IntersectionObserver' in window && !reduceMotion.matches) {
   demo.classList.add('is-armed');
   const siteHeader = document.querySelector('.site-header');

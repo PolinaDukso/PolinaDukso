@@ -678,6 +678,143 @@ button:focus-visible,
 .lightbox-close:focus-visible { outline-color: #fff; }
 html:has(.lightbox[open]) { overflow: hidden; }
 
+/* Home: hero facts — the filled-in form row, now under the lead */
+.hero .facts.facts-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  margin-top: 48px;
+}
+
+/* Status marker for the current job */
+.badge-now { color: #1d7a3e; background: #ebf7ef; border-color: #97d0a8; height: 24px; font-size: 13px; }
+.badge-warn { color: #8a4b00; background: #fdf3e4; border-color: #e9c48f; }
+.badge-diff { color: #a3261b; background: #fdeeec; border-color: #eeb1aa; }
+
+/* Experience: a register of jobs, newest first */
+.timeline {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+.timeline > li {
+  display: grid;
+  grid-template-columns: 11.5em minmax(0, 1fr);
+  gap: 4px 32px;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.timeline time {
+  color: var(--pencil);
+  font-size: 15px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
+.timeline h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0;
+  font: 600 18px/1.4 var(--sans);
+}
+.timeline .role { margin: 2px 0 0; font-size: 16px; color: var(--ink); }
+.timeline .what { margin: 8px 0 0; font-size: 16px; color: var(--pencil); max-width: var(--measure); }
+.timeline .what a { color: var(--stamp); }
+.timeline-more { margin-top: 24px; color: var(--pencil); }
+.section .timeline + .timeline-more,
+.prose .timeline { margin-bottom: 0; }
+
+/* Smaller work: two columns of short entries with one figure each */
+.works {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 48px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.works li { margin: 0; padding: 24px 0; border-top: 1px solid var(--rule); }
+.works h3 { margin: 0 0 8px; font: 600 19px/1.4 var(--sans); }
+.works p { margin: 0; font-size: 16px; color: var(--pencil); }
+.works .works-figure { margin-top: 14px; color: var(--ink); }
+.works .works-figure b {
+  font: 500 28px/1.1 var(--serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  margin-right: 6px;
+}
+
+/*
+  Stock table from the «Конструктор» case: a static scheme of the screen,
+  not a screenshot. Only the underwriter card is animated.
+*/
+.stock-table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.stock-table th {
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--pencil);
+  font-size: 13px;
+  font-weight: 400;
+  text-align: right;
+}
+.stock-table th:first-child,
+.stock-table td:first-child { text-align: left; }
+.stock-table th:not(:first-child) { width: 5.2em; }
+.stock-table td {
+  padding: 10px 0 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  text-align: right;
+  vertical-align: top;
+}
+.stock-table td:first-child { padding-left: 0; }
+.stock-table tr:last-child td { border-bottom: 0; padding-bottom: 0; }
+.stock-table .sku { display: block; color: var(--ink); }
+.stock-table .sku-meta { display: block; margin-top: 2px; font-size: 13px; color: var(--pencil); }
+.stock-table .cell-low,
+.stock-table .cell-diff {
+  display: inline-block;
+  min-width: 2.6em;
+  padding: 1px 6px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+.stock-table .cell-low { color: #8a4b00; background: #fdf3e4; border-color: #e9c48f; }
+.stock-table .cell-diff { color: #a3261b; background: #fdeeec; border-color: #eeb1aa; }
+.stock-table .cell-note { display: block; margin-top: 3px; font-size: 12px; color: var(--pencil); white-space: nowrap; }
+.demo-card .stock-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--pencil);
+}
+.stock-legend span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border: 1px solid;
+  border-radius: 3px;
+  vertical-align: -1px;
+}
+.stock-legend .key-low::before { background: #fdf3e4; border-color: #e9c48f; }
+.stock-legend .key-diff::before { background: #fdeeec; border-color: #eeb1aa; }
+/* as a case cover the scheme keeps the card's reading width */
+.case-cover .demo-card { max-width: 760px; margin-inline: auto; }
+
 /* Footer */
 .site-footer {
   padding: 32px 0 48px;
@@ -793,6 +930,18 @@ html:has(.lightbox[open]) { overflow: hidden; }
   .next-case { padding: 40px 0 64px; }
   .prose { padding-bottom: 64px; }
   .page-head + .container { padding-bottom: 64px; }
+
+  .hero .facts.facts-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    margin-top: 36px;
+  }
+  .timeline > li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .works { grid-template-columns: minmax(0, 1fr); }
+  .stock-table { font-size: 13px; }
+  .stock-table td { padding-left: 8px; }
+  .stock-table .sku-meta { display: none; }
 
   .stories,
   .steps,
