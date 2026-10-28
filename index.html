@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Полина Дуксо — Product Designer | UX/UI портфолио</title>
-  <meta name="description" content="Портфолио Полины Дуксо — продуктовый дизайнер. Интерфейсы для сложных страховых процессов: кабинет андеррайтера, AI-распознавание описи имущества, калькулятор ВЗР.">
+  <meta name="description" content="Портфолио Полины Дуксо — продуктовый дизайнер. Интерфейсы для сложных B2B-процессов: кабинет андеррайтера, AI-распознавание описи имущества, калькулятор ВЗР, учёт остатков для продавцов на маркетплейсах.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Полина Дуксо — продуктовый дизайнер">
+  <meta property="og:description" content="Интерфейсы для сложных B2B-процессов: страховые заявки, описи имущества, учёт товаров на маркетплейсах. Кейсы, опыт и контакты.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
@@ -31,13 +35,14 @@
     <main id="main">
       <section class="hero">
         <div class="container">
-          <h1>Проектирую интерфейсы для сложных страховых процессов: заявок, описей и полисов.</h1>
+          <h1>Проектирую интерфейсы для сложных B2B-процессов: страховых заявок, описей и&nbsp;учёта товаров.</h1>
 
           <div class="intro">
             <img class="portrait" src="photo.jpg" alt="Полина Дуксо" width="375" height="500">
             <div>
               <p class="lead">
-                Я Полина Дуксо, продуктовый дизайнер, 4&nbsp;года опыта — в&nbsp;основном B2B и страхование.
+                Я Полина Дуксо, продуктовый дизайнер. Делаю веб-платформы АльфаСтрахования для страховых посредников,
+                до этого была единственным дизайнером стартапа для продавцов на Wildberries и&nbsp;Ozon.
                 Разбираю процесс, ограничения и поведение пользователей, а потом довожу решение до интерфейса.
               </p>
               <div class="actions">
@@ -46,6 +51,13 @@
               </div>
             </div>
           </div>
+
+          <dl class="facts facts-row">
+            <div><dt>Сейчас</dt><dd>АльфаСтрахование, розничный блок</dd></div>
+            <div><dt>Опыт</dt><dd>5+ лет в дизайне</dd></div>
+            <div><dt>Домены</dt><dd>Страхование, e-commerce</dd></div>
+            <div><dt>Формат</dt><dd>Web, B2B и B2C</dd></div>
+          </dl>
         </div>
       </section>
 
@@ -63,7 +75,7 @@
                 от получения заявки до финального решения, со статусами, ветвлениями и массовыми операциями.
               </p>
               <dl class="facts">
-                <div><dt>Продукт</dt><dd>Полис</dd></div>
+                <div><dt>Продукт</dt><dd>АльфаПолис</dd></div>
                 <div><dt>Формат</dt><dd>Web, B2B</dd></div>
                 <div><dt>Объём</dt><dd>20+ экранов, 6+ статусов</dd></div>
               </dl>
@@ -126,7 +138,7 @@
                 понятное сравнение программ и дополнительные опции с ценами.
               </p>
               <dl class="facts">
-                <div><dt>Компания</dt><dd>АльфаСтрахование</dd></div>
+                <div><dt>Продукт</dt><dd>АльфаПолис</dd></div>
                 <div><dt>Формат</dt><dd>Web, B2C и B2B</dd></div>
                 <div><dt>Объём</dt><dd>27+ экранов, 6 гипотез</dd></div>
               </dl>
@@ -136,13 +148,120 @@
               <img src="ВЗР/VZR cropped.png" alt="" loading="lazy">
             </a>
           </article>
+
+          <article class="case-entry">
+            <div>
+              <h3><a href="project-konstruktor.html">Конструктор</a></h3>
+              <p>
+                Сервис учёта для продавцов на Wildberries и Ozon вместо Excel: остатки по всем складам в одной таблице,
+                подключение кабинетов без помощи команды и сборка заказов с телефона. От 19 интервью до закрытого пилота.
+              </p>
+              <dl class="facts">
+                <div><dt>Роль</dt><dd>Единственный дизайнер</dd></div>
+                <div><dt>Формат</dt><dd>Web + мобильная сборка, B2B</dd></div>
+                <div><dt>Результат</dt><dd>Сверка остатков ~40 минут вместо ~2,5 часа</dd></div>
+              </dl>
+              <a href="project-konstruktor.html">Открыть кейс<span class="visually-hidden"> «Конструктор»</span></a>
+            </div>
+            <a class="demo demo-static" href="project-konstruktor.html" tabindex="-1" aria-hidden="true">
+              <div class="demo-mount">
+                <div class="demo-card">
+                  <div class="demo-head">
+                    <div>
+                      <p class="demo-id">Остатки по складам</p>
+                      <p class="demo-meta">WB, Ozon и свой склад · обновлено 12&nbsp;мин назад</p>
+                    </div>
+                    <span class="badge badge-warn">2 требуют действия</span>
+                  </div>
+                  <table class="stock-table">
+                    <thead>
+                      <tr><th scope="col">Товар</th><th scope="col">WB</th><th scope="col">Ozon</th><th scope="col">Склад</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><span class="sku">Плед флисовый 150×200</span><span class="sku-meta">арт. 4417-02</span></td><td>46</td><td>19</td><td>32</td></tr>
+                      <tr><td><span class="sku">Набор полотенец, 3&nbsp;шт.</span><span class="sku-meta">арт. 2208-11</span></td><td>27</td><td><span class="cell-diff">14</span><span class="cell-note">в учёте 17</span></td><td>21</td></tr>
+                      <tr><td><span class="sku">Кружка керамическая 350&nbsp;мл</span><span class="sku-meta">арт. 1035-04</span></td><td><span class="cell-low">6</span><span class="cell-note">≈&nbsp;4 дня продаж</span></td><td>23</td><td>0</td></tr>
+                      <tr><td><span class="sku">Подушка декоративная 45×45</span><span class="sku-meta">арт. 3120-07</span></td><td>38</td><td>11</td><td>54</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="stock-legend"><span class="key-low">Закончится раньше порога</span><span class="key-diff">Расходится с учётом</span></p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Ещё в&nbsp;АльфаСтраховании</h2>
+            <p class="lead">Задачи без отдельного кейса: системные, исследовательские и те, что сразу ушли в продажи.</p>
+          </div>
+          <ul class="works">
+            <li>
+              <h3>UI-кит вместо дизайн-системы Альфа-Банка</h3>
+              <p>Около 60 компонентов, токены и сетка. Вместе с фронтенд-лидом перевела кит в код, его подключили ещё в 6 проектах: виджеты и лендинги.</p>
+              <p class="works-figure"><b>~1,5 дня</b>вместо ~4 на макеты типовой фичи</p>
+            </li>
+            <li>
+              <h3>Бонусная программа АльфаРУБЛИ</h3>
+              <p>С нуля: вход в программу, баланс, история начислений и правила. Подачу правил проверила на двух раундах юзабилити-тестов.</p>
+              <p class="works-figure"><b>6 из 7</b>понимают правила вместо 2 из 7</p>
+            </li>
+            <li>
+              <h3>Исследование аудитории АльфаАгента</h3>
+              <p>Опрос через UX Feedback, 14 интервью и данные о продажах. Четыре сегмента агентов, на которых маркетинг строит стратегию платформы.</p>
+              <p class="works-figure"><b>~860</b>анкет в опросе</p>
+            </li>
+            <li>
+              <h3>Виджет ВЗР для агентов</h3>
+              <p>Клиент сам рассчитывает и покупает полис по ссылке агента, а продажа закрепляется за агентом. Основной сценарий — с телефона.</p>
+              <p class="works-figure"><b>~2&nbsp;760</b>полисов за первые 3 месяца</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Опыт</h2>
+          </div>
+          <ol class="timeline">
+            <li>
+              <time>07.2025 — сейчас</time>
+              <div>
+                <h3>АльфаСтрахование <span class="badge badge-now">сейчас</span></h3>
+                <p class="role">Продуктовый дизайнер (UX/UI), розничный блок</p>
+                <p class="what">Веб-платформы для страховых посредников: АльфаАгент и АльфаПолис. Две команды разработки, работа в паре с продактом.</p>
+              </div>
+            </li>
+            <li>
+              <time>09.2023 — 06.2025</time>
+              <div>
+                <h3>Стартап «Конструктор»</h3>
+                <p class="role">UI/UX-дизайнер, единственный в команде</p>
+                <p class="what">Сервис учёта остатков для продавцов на Wildberries и Ozon — от интервью до закрытого пилота. <a href="project-konstruktor.html">Кейс</a></p>
+              </div>
+            </li>
+            <li>
+              <time>10.2022 — 08.2023</time>
+              <div>
+                <h3>МАИ, Центр «Беспилотные летательные аппараты»</h3>
+                <p class="role">UX/UI-дизайнер, проектная работа</p>
+                <p class="what">Интерфейс оператора видеоаналитики с дронов для коммерческой охраны: работа с живым видео.</p>
+              </div>
+            </li>
+          </ol>
+          <p class="timeline-more">Раньше — графика и веб: Агентство инноваций Москвы и Мосжилниипроект. <a href="about.html#experience">Весь опыт</a></p>
         </div>
       </section>
 
       <section class="section closing">
         <div class="container">
           <h2>Ищу роль Product Designer</h2>
-          <p>В команде, где важны системность, глубина UX и продуктовая логика.</p>
+          <p>В продуктовой команде со сложным B2B-доменом, где есть исследования и аналитика, а решения проверяют до того, как масштабировать.</p>
           <div class="actions">
             <a class="button" href="contact.html">Связаться</a>
             <a href="about.html">Обо мне</a>
